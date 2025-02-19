@@ -1,0 +1,80 @@
+/* Main container for both sections */
+.main {
+    display: flex;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+
+.leftdiv {
+    margin: 10px;
+    padding: 20px;
+    width: 50%;
+    background: linear-gradient(145deg, #f1f2f6, #e3e5e8);
+    border-radius: 12px;
+    border: 1px solid #d0d3d9;
+    position: relative;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.leftdiv h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin: 0;
+    font-weight: 600;
+}
+
+.leftdiv p {
+    background-color: #e3e5e8;
+    border-radius: 3px;
+    padding: 5px;
+    font-size:2.2rem;
+    color: #7f8c8d; 
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0s 0.4s;
+}
+
+.leftdiv:hover {
+    transform: translateY(-5px); 
+    background: linear-gradient(145deg, #e3e5e8, #f1f2f6);
+}
+
+.leftdiv:hover p {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease, visibility 1s 0s;
+}
+
+/* Right Div */
+.rightdiv {
+    margin: 10px;
+    padding: 20px;
+    width: 50%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #d0d3d9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.rightdiv h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin: 0;
+    font-weight: 600;
+}
+
+.rightdiv p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+/* Typography and font style */
+.open-sans-homepage {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
