@@ -1,0 +1,331 @@
+/* Projects Section Custom Styling */
+
+.projects-section {
+  padding: 100px 40px;
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Project Cards */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.project-category {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--secondary);
+  background: rgba(var(--secondary-rgb), 0.1);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.project-icon {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-main);
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.project-tags span {
+  font-size: 0.75rem;
+  background: var(--bg-badge);
+  border: 1px solid rgba(var(--accent-rgb), 0.12);
+  color: var(--text-main);
+  padding: 4px 10px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .project-tags span {
+  border-color: rgba(var(--accent-rgb), 0.3);
+}
+
+.project-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.project-actions .btn-primary,
+.project-actions .btn-secondary {
+  padding: 10px 18px;
+  font-size: 0.85rem;
+  border-radius: 8px;
+}
+
+/* Modal Overlay */
+.project-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Modal Box */
+.project-modal-content {
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: scaleUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  padding: 50px;
+}
+
+/* Scrollbar customization for Modal */
+.project-modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.project-modal-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.project-modal-content::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.project-modal-content::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Close Button */
+.modal-close-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.modal-close-btn:hover {
+  color: var(--text-main);
+  border-color: var(--accent);
+  transform: rotate(90deg);
+  background-color: rgba(var(--accent-rgb), 0.1);
+}
+
+/* Modal Body */
+.modal-body {
+  text-align: left;
+}
+
+.modal-badge {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--secondary);
+  background: rgba(var(--secondary-rgb), 0.1);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.modal-body h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+  text-align: left;
+  background: linear-gradient(135deg, var(--text-main) 50%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.modal-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+/* Modal Layout Grid */
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+}
+
+.modal-main-details h4,
+.modal-sidebar-details h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 15px;
+  border-bottom: 2px solid rgba(var(--accent-rgb), 0.15);
+  padding-bottom: 8px;
+}
+
+.modal-main-details h4:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+.modal-sidebar-details h4:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+.modal-description {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.modal-highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.highlight-bullet-icon {
+  color: var(--secondary);
+  min-width: 16px;
+  margin-top: 4px;
+}
+
+.cloud-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.cloud-service-badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: rgba(var(--accent-rgb), 0.1);
+  color: var(--text-main);
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cloud-service-badge .badge-icon {
+  color: var(--accent);
+}
+
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.modal-actions .btn-primary,
+.modal-actions .btn-secondary {
+  justify-content: center;
+  width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsiveness adjustments */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 80px 20px;
+  }
+  .project-modal-content {
+    padding: 30px 20px;
+  }
+  .modal-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .modal-close-btn {
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+  }
+  .modal-body h2 {
+    font-size: 1.8rem;
+  }
+}

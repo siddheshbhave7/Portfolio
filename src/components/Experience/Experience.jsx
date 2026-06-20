@@ -26,6 +26,8 @@ import {
   SiNodedotjs,
   SiReact
 } from 'react-icons/si';
+import Typewriter from '../Typewriter/Typewriter';
+import Projects from '../Projects/Projects';
 
 const Experience = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -72,6 +74,7 @@ const Experience = () => {
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
             <a href="#certifications">Certifications</a>
             <a href="#contact">Contact</a>
           </nav>
@@ -89,7 +92,13 @@ const Experience = () => {
         <div className="hero-content">
           <div className="tagline">Welcome to my portfolio</div>
           <h1>Siddhesh Bhave</h1>
-          <p className="title-badge">Software & DevOps Engineer</p>
+          <p className="title-badge">
+            <Typewriter words={[
+              "Software & DevOps Engineer",
+              "Cloud Infrastructure Architect",
+              "Full-Stack Developer"
+            ]} />
+          </p>
           <p className="hero-description">
             Specializing in bridging the gap between development and operations. With 2+ years of professional experience, I architect scalable web applications, containerize workflows, and engineer automated, secure cloud infrastructures.
           </p>
@@ -240,6 +249,9 @@ const Experience = () => {
           </div>
         </div>
       </section>
+
+      {/* Projects Section */}
+      <Projects />
 
       {/* Certifications Section */}
       <section id="certifications" className="certifications-section">
