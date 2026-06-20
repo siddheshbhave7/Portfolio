@@ -1,30 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import './Experience.css';
-import { 
-  FaBriefcase, 
-  FaCode, 
-  FaServer, 
-  FaDatabase, 
-  FaEnvelope, 
-  FaLinkedin, 
-  FaCheckCircle, 
-  FaSun, 
-  FaMoon, 
-  FaCertificate, 
-  FaCogs, 
+import {
+  FaBriefcase,
+  FaCode,
+  FaServer,
+  FaDatabase,
+  FaEnvelope,
+  FaLinkedin,
+  FaCheckCircle,
+  FaSun,
+  FaMoon,
+  FaCertificate,
+  FaCogs,
   FaTools,
   FaFileAlt,
   FaAws
 } from 'react-icons/fa';
-import { 
-  SiDocker, 
-  SiKubernetes, 
-  SiGithubactions, 
-  SiPostgresql, 
-  SiMongodb, 
-  SiAngular, 
-  SiNodedotjs, 
-  SiReact 
+import {
+  SiDocker,
+  SiKubernetes,
+  SiGithubactions,
+  SiPostgresql,
+  SiMongodb,
+  SiAngular,
+  SiNodedotjs,
+  SiReact
 } from 'react-icons/si';
 
 const Experience = () => {
@@ -130,7 +130,7 @@ const Experience = () => {
       {/* Professional Experience (2+ Years) */}
       <section id="experience" className="experience-section">
         <h2>Professional Experience</h2>
-        
+
         <div className="timeline">
           {/* Vernost Tech Venture */}
           <div className="experience-item card">
@@ -296,7 +296,7 @@ const Experience = () => {
           <div className="contact-links-card">
             <h4>Professional Profiles</h4>
             <div className="profile-buttons">
-              <a href="https://linkedin.com/in/siddheshbhave" target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <a href="https://linkedin.com/in/siddhesh-bhave-1684bb303" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 <FaLinkedin /> LinkedIn Profile
               </a>
               <a href="mailto:siddheshbhave7@gmail.com" className="btn-secondary">
