@@ -61,15 +61,15 @@ const Projects = () => {
       ],
       cloudServices: ["AWS Lambda", "AWS S3", "AWS DynamoDB", "Amazon CloudWatch", "Node.js"],
       tags: ["Serverless", "Event-Driven", "Image Processing", "NoSQL"],
-      githubUrl: "https://github.com/siddheshbhave7/serverless-media-pipeline",
-      liveUrl: ""
+      githubUrl: "https://github.com/siddheshbhave7/ImageOptimiser",
+      liveUrl: "https://imageoptimiser.netlify.app"
     }
   ];
 
   return (
     <section id="projects" className="projects-section">
       <h2>Featured Engineering Projects</h2>
-      
+
       <div className="projects-grid">
         {projectsData.map((project) => (
           <div key={project.id} className="project-card card">
@@ -85,8 +85,8 @@ const Projects = () => {
               ))}
             </div>
             <div className="project-actions">
-              <button 
-                onClick={() => setSelectedProject(project)} 
+              <button
+                onClick={() => setSelectedProject(project)}
                 className="btn-primary"
                 style={{ width: '100%', justifyContent: 'center' }}
               >
@@ -98,9 +98,9 @@ const Projects = () => {
       </div>
 
       {selectedProject && (
-        <ProjectModal 
-          project={selectedProject} 
-          onClose={() => setSelectedProject(null)} 
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
         />
       )}
     </section>
