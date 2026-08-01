@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Typewriter = ({ 
-  words = ["Software Engineer", "DevOps Engineer", "Cloud Infrastructure Architect"], 
+  words = ["Software Engineer", "DevOps Engineer", "Cloud Engineer"], 
   typingSpeed = 100, 
   deletingSpeed = 50, 
   delayBetweenWords = 2000 

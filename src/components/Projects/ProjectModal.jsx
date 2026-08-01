@@ -1,17 +1,18 @@
 import React, { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { FaGithub, FaExternalLinkAlt, FaTimes, FaCloud, FaServer, FaCogs } from 'react-icons/fa';
 
 const ProjectModal = ({ project, onClose }) => {
   useEffect(() => {
     // Disable body scrolling when modal is active
     document.body.style.overflow = 'hidden';
-    
+
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') {
         onClose();
       }
     };
-    
+
     window.addEventListener('keydown', handleKeyDown);
     return () => {
       document.body.style.overflow = 'unset';
@@ -21,23 +22,23 @@ const ProjectModal = ({ project, onClose }) => {
 
   if (!project) return null;
 
-  return (
+  return createPortal(
     <div className="project-modal-overlay" onClick={onClose}>
       <div className="project-modal-content card" onClick={(e) => e.stopPropagation()}>
         <button className="modal-close-btn" onClick={onClose} aria-label="Close modal">
           <FaTimes />
         </button>
-        
+
         <div className="modal-body">
           <span className="modal-badge">{project.category}</span>
           <h2>{project.title}</h2>
           <p className="modal-subtitle">{project.subtitle}</p>
-          
+
           <div className="modal-grid">
             <div className="modal-main-details">
               <h4>System Architecture Overview</h4>
               <p className="modal-description">{project.detailedDescription}</p>
-              
+
               <h4>Key Architecture Highlights</h4>
               <ul className="modal-highlights">
                 {project.highlights.map((highlight, idx) => (
@@ -48,7 +49,7 @@ const ProjectModal = ({ project, onClose }) => {
                 ))}
               </ul>
             </div>
-            
+
             <div className="modal-sidebar-details">
               <h4><FaCloud /> Cloud Services Used</h4>
               <div className="cloud-list">
@@ -82,7 +83,8 @@ const ProjectModal = ({ project, onClose }) => {
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
 

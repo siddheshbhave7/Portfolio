@@ -95,7 +95,7 @@ const Experience = () => {
           <p className="title-badge">
             <Typewriter words={[
               "Software & DevOps Engineer",
-              "Cloud Infrastructure Architect",
+              "Cloud Engineer",
               "Full-Stack Developer"
             ]} />
           </p>
