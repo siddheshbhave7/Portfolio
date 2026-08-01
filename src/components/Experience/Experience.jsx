@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import './Experience.css';
 import {
   FaBriefcase,
@@ -27,7 +27,7 @@ import {
   SiReact
 } from 'react-icons/si';
 import Typewriter from '../Typewriter/Typewriter';
-import Projects from '../Projects/Projects';
+const Projects = React.lazy(() => import('../Projects/Projects'));
 
 const Experience = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -251,7 +251,9 @@ const Experience = () => {
       </section>
 
       {/* Projects Section */}
-      <Projects />
+      <Suspense fallback={<div className="loading-fallback" style={{ height: '50vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Loading Projects...</div>}>
+        <Projects />
+      </Suspense>
 
       {/* Certifications Section */}
       <section id="certifications" className="certifications-section">
