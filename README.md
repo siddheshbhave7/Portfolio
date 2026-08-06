@@ -2,7 +2,7 @@
 
 Welcome to the personal portfolio repository of **Siddhesh Bhave**, a Software & DevOps Engineer specializing in scalable cloud architectures, containerization, automated CI/CD pipelines, and full-stack web development.
 
-🌍 **Live Website:** [https://siddheshdevops.netlify.app/](https://siddheshdevops.netlify.app/)
+🌍 **Live Website:** [https://siddheshbhave.netlify.app/](https://siddheshbhave.netlify.app/)
 
 ## 🚀 About Me
 

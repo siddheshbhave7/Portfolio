@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Replace with your actual domain if different
-Sitemap: https://siddheshdevops.netlify.app/sitemap.xml
+Sitemap: https://siddheshbhave.netlify.app/sitemap.xml
