@@ -43,7 +43,8 @@ const Projects = () => {
       cloudServices: ["AWS EC2", "AWS EFS", "AWS ElastiCache (Redis)", "MySQL", "MongoDB", "PM2"],
       tags: ["Database Sync", "Caching", "Distributed Systems", "Clustering"],
       githubUrl: "https://github.com/siddheshbhave7/db-sync-cache-service",
-      liveUrl: ""
+      liveUrl: "",
+      status: "In Progress"
     },
     {
       id: 3,
@@ -74,7 +75,10 @@ const Projects = () => {
         {projectsData.map((project) => (
           <div key={project.id} className="project-card card">
             <div className="project-card-header">
-              <span className="project-category">{project.category}</span>
+              <div className="project-badges">
+                <span className="project-category">{project.category}</span>
+                {project.status && <span className={`status-badge ${project.status.toLowerCase().replace(' ', '-')}`}>{project.status}</span>}
+              </div>
               <div className="project-icon">{project.icon}</div>
             </div>
             <h3>{project.title}</h3>

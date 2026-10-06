@@ -30,7 +30,10 @@ const ProjectModal = ({ project, onClose }) => {
         </button>
 
         <div className="modal-body">
-          <span className="modal-badge">{project.category}</span>
+          <div className="project-badges" style={{marginBottom: '15px'}}>
+            <span className="modal-badge" style={{marginBottom: 0}}>{project.category}</span>
+            {project.status && <span className={`status-badge ${project.status.toLowerCase().replace(' ', '-')}`}>{project.status}</span>}
+          </div>
           <h2>{project.title}</h2>
           <p className="modal-subtitle">{project.subtitle}</p>
 
