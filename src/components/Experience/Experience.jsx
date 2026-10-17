@@ -346,7 +346,7 @@ const Experience = () => {
               </div>
             </div>
             <span className="date">2017 – 2021</span>
-            <p className="edu-desc">Undergraduate engineering degree providing a strong foundation in computer science and software engineering principles.</p>
+            {/* <p className="edu-desc">Undergraduate engineering degree providing a strong foundation in computer science and software engineering principles.</p> */}
           </div>
         </div>
       </section>
